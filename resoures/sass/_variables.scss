@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @author: 
+ @www: 
+ @github: 
+ @version: 1.0
+
+
+ =============================================================================
+ Filename: _variables.scss
+ =============================================================================
+ This file is responsible for all variables in the charity app.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+
+/* =============================================================================
+Types
+========================================================================== */
+
+$font_main: "'Lato', 'Arial', sans-serif;";
+$font_secondary : "'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif;";
+$font_titles : "'Dosis', sans-serif";
+$font-heading: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
+$logo-font: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+
+/* =============================================================================
+Colours
+========================================================================== */
+
+$color_main: #16A085;
+$color_secondary:#9F90F0;
+$text-color: #0B080B; 
+$orange-color: #e67e22; 
+$light-orange: #e67e22; 
+$dark-orange: #cf6d17;
+$color-grey: #f4f4f4;
+
+
+/* =============================================================================
+Variables I don't know why is not reading the layout
+========================================================================== */
+
+/* target / contest = result */
+
+$base-font: 10px;
+$body-font: 62.5%; /* 1em = 10px */
+$base-weight: 300;
+$full-width: 100%;
+$half-width: 50%;
+
+
+
+/* =============================================================================
+	Strings
+========================================================================== */
+
+$string: "img/hero-image2-min.jpg";
+
+
+
+
