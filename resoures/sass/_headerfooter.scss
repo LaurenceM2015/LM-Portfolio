@@ -22,18 +22,15 @@ header{
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
-	display: flex;
-    justify-content: center;
-    flex-direction: column;
 	
-	
-	
+	@include flexColumnCenter();
+
 }
 
 .hero-text-box{
 	@media (min-width: 768px){
-		display: flex;
-		padding: 15% 0;
+		
+		
 	}
 	
 	.hero-banner-text{
@@ -43,10 +40,8 @@ header{
 			
 		
 		@media (min-width: 768px){
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
+			@include flex-columnBetween();
+		} 
 		
 		small.intro-lead-in{
 				
@@ -81,7 +76,6 @@ header{
     		padding: 1.000em 2.000em;
 			color: #fff;
 			text-transform: uppercase;			
-			border: 1px solid white;
 			cursor: pointer;
 			
 		}

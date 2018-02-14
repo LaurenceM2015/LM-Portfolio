@@ -37,8 +37,11 @@ body {
     font-family: $font_main;
     font-weight: $base-weight;
     font-size: $body-font;
+	line-height: $base-line-height;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+	
+	@include flexColumn();
 }
 
 
@@ -60,8 +63,9 @@ container: widtth: 960px, padding-right: 15px, padding-left: 15px; and marging w
 h1,
 h2,
 h3 {
-    font-weight: 300;
+    font-weight: 700;
 	text-align: center;
+	font-family: $font-heading;
     text-transform: uppercase;
 }
 
@@ -79,50 +83,48 @@ h1 {
 }
 
 h2 {
-    font-size: 180%;
+    font-size: 8.000em;
     word-spacing: 0.200em;
-    margin-bottom: 3.000em;
+    margin-bottom: 1.000em;
     
 }
 
 h3 {
-    font-size: 110%;
+    font-size: 3.500em;
     margin-bottom:1.500em;
 }
 
 h2:after {
     display: block;
-    height: 0.200em;
+    height: 0.100em;
     background-color: #e67e22;
     content: " ";
-    width: 10.000em;
+    width: 100px;
     margin: 0 auto;
-    margin-top: 3.000em;
+    margin-top: 0.400em;
 }
 
 .container{
 	width: 100%;
-    padding-right: 1.5%; /* 1.500em; 15px*/
-    padding-left: 1.5%; /*1.500em;15px*/
+    padding-right: 1.500em; /* 1.500em; 15px*/
+    padding-left: 1.500em; /*1.500em;15px*/
     margin-right: auto;
     margin-left: auto;
-
-	
 }
 
-
 .row {
-    max-width: 1140px;
-    margin: 0 auto;
+	@include flexWrap();
 	
-	display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     margin-right: -1.500em;
     margin-left: -1.500em;
 }
+
+p{
+	font-size: 2.800em;
+}
+
+
+
 
 .bg-light-gray {
     background-color: #eee;
@@ -145,40 +147,31 @@ section{
 	}
 }
 
-.col-box{
-	display: flex;
-	justify-content: center;
-	
-	
-	
-		&:first-child { margin-left: 0; }
-	
-	@media only screen and (min-width: 768px){margin: 1% 0 1% 1.6%;}
-}
-
-.col-box-3{
-	width: 100%;
-
-		@media only screen and (min-width: 768px){width: 32.26%;}
-}
-
-
-.col-box-4{
-	width: 100%;
-		@media only screen and (min-width: 768px){width: 23.8%;}
-}
 
 
 
 
-
-
-
-
-/* =============================================================================
-Home Slider
+/* ============================================================================
+Service Section
 ========================================================================== */
 
+.flex-container{
+	@media (min-width: 768px){
+		@include displayFlex();
+	}
+	
+	
+	.col-box-3{
+		flex-basis: 100%;
+		@media (min-width: 768px){
+			flex-basis: 33.333333%;
+			padding-right: 1.500em;
+    		padding-left: 1.500em;
+		}
+			
+	}
+	
+}
 
 
 /* =============================================================================

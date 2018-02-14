@@ -20,8 +20,7 @@
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.98);
-	
-    box-shadow: 0 2px 2px #efefef;
+    @include boxShodow();
     z-index: 9999;
 	
 	ul.main-nav li a{
@@ -36,11 +35,10 @@ nav.navbar{
 	width: 100%;
 	position: fixed;
 	@media (min-width: 768px){
-		padding-top: 2.500em;
-		padding-bottom: 2.500em;
+		padding-top: 1.500em;
+		padding-bottom: 1.500em;
 	}
     
-
 	#nav-container{
 		
 		@media (min-width: 768px){
@@ -96,25 +94,23 @@ nav.navbar{
 				
 				@include flexEnd();
 				@include flex-3();
-				 padding-right: 1.000em;
 				
-				
-				
+				padding-right: 1.000em;
 				padding-top: 1.200em;
 
 			}
 			
 			li{
 				text-transform: uppercase;
-				font-size: 3.000em;
+				font-size: 2.300em;
 				padding: 0.500em 0;
 				
 				@media (min-width: 768px){
-					margin-left: 4.000em;
+					margin-left: 2.500em;
 					text-align: center;
 					
 					&:link, &:visited{
-						border-bottom: 2px solid transparent;
+						border-bottom: $border-B-t;
 						transition: border-bottom 0.2s;
 
 					}
@@ -125,12 +121,10 @@ nav.navbar{
 					color: #fff;
 					letter-spacing: 1px;
 					
-					
 					@media (min-width: 768px){
 						&:hover, &:active{
 							color: $color_main;
-							
-							border-bottom: 2px solid $color_main;
+							border-bottom: $border-B-mc;
 						}
 					}
 
