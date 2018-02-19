@@ -23,7 +23,7 @@ header{
 	background-position: center;
 	height: 100vh;
 	
-	@include flexColumnCenter();
+	@include flexColumnCenter(column, center, center);
 
 }
 
@@ -40,7 +40,7 @@ header{
 			
 		
 		@media (min-width: 768px){
-			@include flex-columnBetween();
+			@include flex-columnBetween(column, space-between);
 		} 
 		
 		small.intro-lead-in{

@@ -41,7 +41,7 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 	
-	@include flexColumn();
+	@include flex-direction(column);
 }
 
 
@@ -97,7 +97,7 @@ h3 {
 h2:after {
     display: block;
     height: 0.100em;
-    background-color: #e67e22;
+    background-color: $color_main;
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -113,7 +113,7 @@ h2:after {
 }
 
 .row {
-	@include flexWrap();
+	@include flex-wrap(wrap);
 	
     margin-right: -1.500em;
     margin-left: -1.500em;
@@ -125,13 +125,8 @@ p{
 
 
 
-
-.bg-light-gray {
-    background-color: #eee;
-}
-
-.box {
-    padding: 1%;
+figure{
+	margin: 0;
 }
 
 
@@ -141,25 +136,14 @@ section{
 
 
 
-.sevices-featured{
-	h1{
-		color: red;
-	}
-}
 
 
-
-
-
-/* ============================================================================
-Service Section
-========================================================================== */
 
 .flex-container{
 	@media (min-width: 768px){
-		@include displayFlex();
+		@include justify-content(space-evenly);
+		
 	}
-	
 	
 	.col-box-3{
 		flex-basis: 100%;
@@ -172,6 +156,18 @@ Service Section
 	}
 	
 }
+
+
+
+
+/* ============================================================================
+Section Portfolio
+========================================================================== */
+
+.portfolio-section{
+	background-color: $light-grey;
+}
+
 
 
 /* =============================================================================

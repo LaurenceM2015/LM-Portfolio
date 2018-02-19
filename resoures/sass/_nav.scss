@@ -47,7 +47,9 @@ nav.navbar{
 		}
 		
 		.branding{
-			@include flexSpaceBetween();
+			 
+			@include justify-content(space-between);
+			
 			padding: 1.000em;
 			height: auto;
 
@@ -59,7 +61,7 @@ nav.navbar{
 				padding-top: 0.500em;
 				
 				@media (min-width: 768px){
-					@include flex-1();
+					@include flexValue(1);
 					font-size: 4.000em;
 					padding-top: 0;
 
@@ -92,8 +94,8 @@ nav.navbar{
 			
 			@media (min-width: 768px){
 				
-				@include flexEnd();
-				@include flex-3();
+				@include justify-content(flex-end);
+				@include flexValue(3);
 				
 				padding-right: 1.000em;
 				padding-top: 1.200em;

@@ -9,40 +9,12 @@
  =============================================================================
  This file is responsible for establishing base styles for the charity app.
  --------------------------------------------------------------------------------------------------------------------- */
-@import "_mixin.scss";
+
 /* ----------------------------------------------- */
 /* BASIC SETUP */
 /* ----------------------------------------------- */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-.clearfix {zoom: 1;}
-.clearfix:after {
-    content: '.';
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
-html{}
-
-html,
-body {
-    background-color: #fff;
-    color: #555;
-    font-family: $font_main;
-    font-weight: $base-weight;
-    font-size: $body-font;
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden;
-	
-	@include displayFlex();
-}
 
 
 
