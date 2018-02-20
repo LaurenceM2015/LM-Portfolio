@@ -25,7 +25,9 @@
 	/*padding-bottom: 4.000em;*/
 }
 
-// Flexbox display
+/*Flexbox display
+  applied to flex container
+*/
 @mixin displayFlex(){
 	display: -webkit-box;
 	display: -moz-box;
@@ -34,37 +36,6 @@
 	display: flex;
 }
 
-/* This applies to flex items: initial, auto, or none
-======================================================*/
-
-@mixin flexValue($values) {
-  -webkit-box-flex: $values;
-     -moz-box-flex: $values;
-      -webkit-flex: $values;
-  	  -ms-flex: $values;
-  	      flex: $values;
-}
-
-
-
-@mixin order($val) {
-  -webkit-box-ordinal-group: $val;  
-     -moz-box-ordinal-group: $val;     
-  	     -ms-flex-order: $val;     
-  	      -webkit-order: $val;  
-  		      order: $val;
-}
-
-/* Flex basis
-// - the initial main size of the flex item
-// - applies to: flex itemsnitial main size of the flex item
-// <width> */
-@mixin flex-basis($width) {
-  -webkit-flex-basis: $width;
-     -moz-flex-basis: $width;
-      -ms-flex-basis: $width;
-          flex-basis: $width;
-}
 
 
 
@@ -83,6 +54,25 @@
       -ms-flex-direction: $direction;
           flex-direction: $direction;
 }
+
+/* Axis Alignment. Applied to flex container
+	flex-start, flex-end, space-between, space-around, space-evenly
+*/
+
+@mixin justify-content($justify) {
+	display: -webkit-box;
+ 	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
 
 
 /* This applies to flex container: nowrap, wrap, and wrap-reverse
@@ -119,50 +109,8 @@
           flex-flow: $flow;
 }
 
-@mixin flex-grow($grow) {
-	display: -webkit-box;
- 	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	
-  -webkit-flex-grow: $grow;
-     -moz-flex-grow: $grow;
-      -ms-flex-grow: $grow;
-          flex-grow: $grow;
-}
 
 
-@mixin flex-shrink($shrink) {
-	display: -webkit-box;
- 	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	
-  -webkit-flex-shrink: $shrink;
-     -moz-flex-shrink: $shrink;
-      -ms-flex-shrink: $shrink;
-          flex-shrink: $shrink;
-}
-
-/* Axis Alignment. Applied to flex container
-	flex-start, flex-end, space-between, space-around, space-evenly
-*/
-
-@mixin justify-content($justify) {
-	display: -webkit-box;
- 	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	
-  -webkit-justify-content: $justify;
-     -moz-justify-content: $justify;
-      -ms-justify-content: $justify;
-          justify-content: $justify;
-            -ms-flex-pack: $justify;
-}
 
 /*Packing Flex Lines
  - applies to: multi-line flex containers
@@ -170,6 +118,12 @@
 */
 
 @mixin align-content($align) {
+	display: -webkit-box;
+ 	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	
   -webkit-align-content: $align;
      -moz-align-content: $align;
       -ms-align-content: $align;
@@ -180,14 +134,78 @@
 
 /* Cross-axis Alignment
  - applies to: flex containers
- flex-start | flex-end | center | baseline | stretch 
+stretch | flex-start | flex-end | center | baseline | 
 */
 @mixin align-items($align) {
+	
+	display: -webkit-box;
+ 	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	
   -webkit-align-items: $align;
      -moz-align-items: $align;
       -ms-align-items: $align;
           align-items: $align;
 }
+
+
+
+/* This applies to flex items: initial, auto, or none
+======================================================*/
+
+@mixin flexValue($values) {
+  -webkit-box-flex: $values;
+     -moz-box-flex: $values;
+      -webkit-flex: $values;
+  	  -ms-flex: $values;
+  	      flex: $values;
+}
+
+
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+     -moz-box-ordinal-group: $val;     
+  	     -ms-flex-order: $val;     
+  	      -webkit-order: $val;  
+  		      order: $val;
+}
+
+/* Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width> */
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+/* Flex-grow applied to flex items 
+=====================================*/
+
+@mixin flex-grow($grow) {
+	
+  -webkit-flex-grow: $grow;
+     -moz-flex-grow: $grow;
+      -ms-flex-grow: $grow;
+          flex-grow: $grow;
+}
+
+/*  
+Flex-shrink:	Applied to flex-items
+======================================*/
+@mixin flex-shrink($shrink) {
+	
+  -webkit-flex-shrink: $shrink;
+     -moz-flex-shrink: $shrink;
+      -ms-flex-shrink: $shrink;
+          flex-shrink: $shrink;
+}
+
 
 /* Cross-axis Alignment
  - applies to: flex items
@@ -200,8 +218,6 @@
       -ms-align-self: $align;
           align-self: $align;
 }
-
-
 
 
 

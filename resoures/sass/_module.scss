@@ -17,12 +17,13 @@
 Link 
 ========================================================================== */
 
+img{
+	width: 100%;
+}
+
 ul{
 	list-style: none;
 }
-
-
-
 
 
 a{
@@ -30,6 +31,14 @@ a{
 	text-decoration: none;
 		
 }
+
+/* ----- ICONS ----- */
+.icon-big {
+    font-size: 15.000em;
+    display: block;
+    color: $color_main;
+}
+
 
 
 

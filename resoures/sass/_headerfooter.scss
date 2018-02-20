@@ -30,7 +30,6 @@ header{
 .hero-text-box{
 	@media (min-width: 768px){
 		
-		
 	}
 	
 	.hero-banner-text{
@@ -44,11 +43,13 @@ header{
 		} 
 		
 		small.intro-lead-in{
-				
+			font-size: 3.000em;
+			font-style: italic;
+			line-height: 1.5;
 				@media (min-width: 768px){
-					font-size: 40px;
-					font-style: italic;
-					line-height: 1.5;
+					font-size: 4.000em;
+					
+					
 				}
 				
 		}
@@ -56,6 +57,7 @@ header{
 		h1.intro-heading{
 	
 			font-family: $font-heading;
+			font-size: 3.400em;
 
 			@media (min-width: 768px){
 				font-size: 8.500em;

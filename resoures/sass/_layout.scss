@@ -135,11 +135,14 @@ section{
 }
 
 
-
-
-
+.icon-container{
+	@include justify-content(center);
+	
+	
+}
 
 .flex-container{
+	text-align: center;
 	@media (min-width: 768px){
 		@include justify-content(space-evenly);
 		
@@ -151,6 +154,10 @@ section{
 			flex-basis: 33.333333%;
 			padding-right: 1.500em;
     		padding-left: 1.500em;
+		}
+		
+		h3{
+			
 		}
 			
 	}
