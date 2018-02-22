@@ -272,12 +272,18 @@ Flex-shrink:	Applied to flex-items
 
 
 
-@mixin flex-row-wrap($R, $W){
+@mixin flex-row-wrap($justify, $R, $W){
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	
+	-webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
 	
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -289,7 +295,7 @@ Flex-shrink:	Applied to flex-items
 
 
 
-@mixin flexFlow-row-wrap{
+@mixin flexbox-flow($R, $W){
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -298,10 +304,24 @@ Flex-shrink:	Applied to flex-items
 	
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	-webkit-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	flex-flow: row wrap;
+	-webkit-flex-flow: $R, $W;
+	-ms-flex-flow: $R, $W;
+	flex-flow: $R, $W;
 }
+
+/*.display{
+	display: flex;
+	flex-flow: column;
+	flex-flow: column-reverse;
+	flex-flow: nowrap;
+	flex-flow: row;
+	flex-flow:row-reverse;
+	flex-flow: wrap;
+	flex-flow: wrap-reverse;
+}
+
+*/
+
 
 
 
